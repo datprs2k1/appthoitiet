@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="23:00"
+        android:textColor="@color/black"
         android:textAlignment="center"
         />
     <ImageView
@@ -19,6 +20,7 @@
     <TextView
         android:layout_marginTop="5dp"
         android:id="@+id/tvNhietDo"
+        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="25 C"

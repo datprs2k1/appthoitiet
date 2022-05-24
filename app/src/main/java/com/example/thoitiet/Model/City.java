@@ -6,8 +6,8 @@ public class City {
     private String country;
     private int population;
     private int timezone;
-    private int sunrise;
-    private int sunset;
+    private Long sunrise;
+    private Long sunset;
 
     public int getId() {
         return id;
@@ -49,19 +49,19 @@ public class City {
         this.timezone = timezone;
     }
 
-    public int getSunrise() {
+    public Long getSunrise() {
         return sunrise;
     }
 
-    public void setSunrise(int sunrise) {
+    public void setSunrise(Long sunrise) {
         this.sunrise = sunrise;
     }
 
-    public int getSunset() {
+    public Long getSunset() {
         return sunset;
     }
 
-    public void setSunset(int sunset) {
+    public void setSunset(Long sunset) {
         this.sunset = sunset;
     }
 }

@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 public class ThoiTietGioApdater extends RecyclerView.Adapter<ThoiTietGioApdater.ThoiTietGioHolder>{
 
@@ -40,16 +41,12 @@ public class ThoiTietGioApdater extends RecyclerView.Adapter<ThoiTietGioApdater.
     public void onBindViewHolder(@NonNull ThoiTietGioHolder holder, int position) {
         LWeather weather = list.get(position);
         String nhietDo = weather.getMain().getTemp();
-        String thoiGian = "";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("HH:mm");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
+        Date a = new Date(Long.valueOf(weather.getDt()) * 1000L);
+        String thoiGian = simpleDateFormat.format(a);
         String dt_txt = weather.getDt_txt();
-        try {
-            Date dt = simpleDateFormat.parse(dt_txt);
-            thoiGian = simpleDateFormat1.format(dt);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
         holder.tvNhietDo.setText(""+Math.round(Double.valueOf(nhietDo)) + "°C");
         holder.tvThoiGian.setText(thoiGian);
         Picasso.get().load("http://openweathermap.org/img/wn/" + weather.getWeather().get(0).getIcon() + "@2x.png").into(holder.imgIcon);
