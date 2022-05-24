@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_editor_absoluteX="1dp"
+    app:layout_editor_absoluteY="1dp"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/tvNhietDo"
+            android:text="Nhiệt độ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvViTri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hà Nội"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_below="@id/tvNhietDo"
+            />
+
+        <TextView
+            android:id="@+id/tvChiTiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvViTri"
+            android:layout_marginTop="10dp"
+            android:text="Cảm giác như"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvCamGiac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChiTiet"
+            android:layout_marginTop="10dp"
+            android:text="Cảm giác như"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21:58"
+            android:layout_below="@+id/tvCamGiac"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            />
+        <LinearLayout
+            android:id="@+id/TrangThai"
+            android:layout_below="@+id/tvThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="Độ ẩm"
+
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="Độ ẩm"
+                android:gravity="center_horizontal"
+
+                />
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="Độ ẩm"
+                android:gravity="center_horizontal"
+
+                />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TrangThai"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            app:layout_editor_absoluteX="1dp"
+            app:layout_editor_absoluteY="1dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lvThoiTietGio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+</ScrollView>
