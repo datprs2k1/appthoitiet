@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Thoitiet/app/src/main/res/drawable/ic_home.xml" value="0.2265" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/activity_city_detail.xml" value="0.22826086956521738" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/activity_detail.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/activity_main.xml" value="0.18432971014492755" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/activity_main2.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/fragment_about.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/fragment_city.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/fragment_city_list.xml" value="0.1" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/fragment_home.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/fragment_list.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/list_ngay.xml" value="0.11302083333333333" />
+        <entry key="..\:/Thoitiet/app/src/main/res/layout/list_thanh_pho.xml" value="0.22826086956521738" />
+        <entry key="..\:/Thoitiet/app/src/main/res/menu/bottom_nav_menu.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/Thoitiet/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Administrator/Downloads/Compressed/Thoitiet/Thoitiet/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Administrator/Downloads/Compressed/Thoitiet/Thoitiet/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />

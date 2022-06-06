@@ -1,6 +1,8 @@
 package com.example.thoitiet.Model;
 
-public class Sys {
+import java.io.Serializable;
+
+public class Sys implements Serializable {
     private String pod;
 
     public String getPod() {

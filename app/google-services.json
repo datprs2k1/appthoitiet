@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "325801452543",
+    "project_id": "thoitiet-17236",
+    "storage_bucket": "thoitiet-17236.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325801452543:android:9d17436acd578265d0fdca",
+        "android_client_info": {
+          "package_name": "com.example.thoitiet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325801452543-5u0u0ro2ok7nkfs8bfspn5enko75qafv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEgonFQAI5IKz6_dyYe45uss_z-hK_37c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325801452543-5u0u0ro2ok7nkfs8bfspn5enko75qafv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

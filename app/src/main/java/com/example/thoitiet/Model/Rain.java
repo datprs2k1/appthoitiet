@@ -2,7 +2,9 @@ package com.example.thoitiet.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Rain {
+import java.io.Serializable;
+
+public class Rain implements Serializable {
     @SerializedName("3h")
     private String threeh;
 

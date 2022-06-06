@@ -1,22 +1,24 @@
-package com.example.thoitiet;
+package com.example.thoitiet.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.thoitiet.DetailActivity;
 import com.example.thoitiet.Model.LWeather;
-import com.example.thoitiet.Model.Weather;
+import com.example.thoitiet.R;
 import com.squareup.picasso.Picasso;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
@@ -24,9 +26,13 @@ import java.util.TimeZone;
 public class ThoiTietGioApdater extends RecyclerView.Adapter<ThoiTietGioApdater.ThoiTietGioHolder>{
 
     List<LWeather> list;
+    Context mContext;
+    String thanhPho;
 
-    public ThoiTietGioApdater(List<LWeather> list) {
+    public ThoiTietGioApdater(List<LWeather> list, Context mContext, String thanhPho) {
         this.list = list;
+        this.mContext = mContext;
+        this.thanhPho = thanhPho;
     }
 
     @NonNull
@@ -50,6 +56,18 @@ public class ThoiTietGioApdater extends RecyclerView.Adapter<ThoiTietGioApdater.
         holder.tvNhietDo.setText(""+Math.round(Double.valueOf(nhietDo)) + "°C");
         holder.tvThoiGian.setText(thoiGian);
         Picasso.get().load("http://openweathermap.org/img/wn/" + weather.getWeather().get(0).getIcon() + "@2x.png").into(holder.imgIcon);
+
+        holder.listNgay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, DetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("thoitiet", weather);
+                intent.putExtras(bundle);
+                intent.putExtra("thanhPho", thanhPho);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -62,12 +80,14 @@ public class ThoiTietGioApdater extends RecyclerView.Adapter<ThoiTietGioApdater.
         private TextView tvThoiGian;
         private TextView tvNhietDo;
         private ImageView imgIcon;
+        private LinearLayout listNgay;
 
         public ThoiTietGioHolder(@NonNull View itemView) {
             super(itemView);
             tvThoiGian = itemView.findViewById(R.id.tvThoiGian);
             tvNhietDo = itemView.findViewById(R.id.tvNhietDo);
             imgIcon = itemView.findViewById(R.id.imgIcon);
+            listNgay = (LinearLayout) itemView.findViewById(R.id.listNgay);
         }
     }
 }

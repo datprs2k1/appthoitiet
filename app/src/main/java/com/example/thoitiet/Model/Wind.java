@@ -1,6 +1,8 @@
 package com.example.thoitiet.Model;
 
-public class Wind {
+import java.io.Serializable;
+
+public class Wind implements Serializable {
     private String speed;
     private String deg;
     private String gust;

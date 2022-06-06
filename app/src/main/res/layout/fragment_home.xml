@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_editor_absoluteX="1dp"
+    app:layout_editor_absoluteY="1dp"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/timkiem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:weightSum="3">
+            <EditText
+                android:id="@+id/edtThanhPho"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:hint="Nhập thành phố"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:id="@+id/btnSubmit"
+                android:text="Gửi"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/teal_700"
+
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvNhietDo"
+            android:text="Nhiệt độ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_marginTop="100dp"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvViTri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hà Nội"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_below="@id/tvNhietDo"
+            />
+
+        <TextView
+            android:id="@+id/tvChiTiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvViTri"
+            android:layout_marginTop="10dp"
+            android:text="Cảm giác như"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvCamGiac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChiTiet"
+            android:layout_marginTop="10dp"
+            android:text="Cảm giác như"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21:58"
+            android:layout_below="@+id/tvCamGiac"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            />
+        <LinearLayout
+            android:id="@+id/TrangThai"
+            android:layout_below="@+id/tvThoiGian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:id="@+id/tvDoAm"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="Độ ẩm"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/tvMay"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="Độ ẩm"
+                android:gravity="center_horizontal"
+
+                />
+            <TextView
+                android:id="@+id/tvGio"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="Độ ẩm"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+
+                />
+        </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lvThoiTietGio"
+                android:layout_below="@+id/TrangThai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_below="@+id/lvThoiTietGio"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:src="@drawable/sunrise"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/tvMatTroiMoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Mặt trời mọc"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:src="@drawable/sunset"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/tvMatTroiLan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Mặt trời mọc"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

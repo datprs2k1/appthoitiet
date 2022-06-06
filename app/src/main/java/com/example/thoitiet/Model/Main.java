@@ -1,6 +1,8 @@
 package com.example.thoitiet.Model;
 
-public class Main {
+import java.io.Serializable;
+
+public class Main implements Serializable {
     private String temp;
     private String feels_like;
     private String temp_min;

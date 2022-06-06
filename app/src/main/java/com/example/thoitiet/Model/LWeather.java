@@ -1,8 +1,9 @@
 package com.example.thoitiet.Model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class LWeather {
+public class LWeather implements Serializable {
     private String dt;
     private List<Weather> weather;
     private String visibility;
